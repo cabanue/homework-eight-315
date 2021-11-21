@@ -1,0 +1,42 @@
+<div class="create">
+    <p class="create__title">
+  
+    </p>
+    <div class="form">
+        <div class="form__inputs">
+            <!-- <input class="form__inputs__input" type="text" placeholder="Add Recipe Image" id="image"> -->
+            <select class="form__inputs__input" name="recipe image" id="image">
+                <option value="Pizza">Pizza</option>
+                <option value="Pilaf">Chicken</option>
+                <option value="Burger">Burger</option>
+                <option value="Chow">Chow Mein</option>
+            </select>
+            <!-- <div class="form__inputs__upload">Attach File</div> -->
+            <input class="form__inputs__input" type="text" placeholder="Recipe Name" id="name">
+            <input class="form__inputs__input" type="text" placeholder="Recipe Description" id="description">
+            <input class="form__inputs__input" type="text" placeholder="Recipe Total Time" id="time">
+            <input class="form__inputs__input" type="text" placeholder="Recipe Serving Size" id="servings">
+        </div>
+        <div class="form__inputs">
+            <p class="form__inputs__title">Enter Ingredients:</p>
+            <div class="form__inputs__plus" onclick="ingrInput()">+</div>
+            <div id="ingredients">
+                <input class="form__inputs__input" type="text" placeholder="Ingredient #1" id="ingredient1">
+                <input class="form__inputs__input" type="text" placeholder="Ingredient #2" id="ingredient2">
+                <input class="form__inputs__input" type="text" placeholder="Ingredient #3" id="ingredient3">   
+            </div>
+        </div>
+        <div class="form__inputs">
+            <p class="form__inputs__title">Enter Instructions:</p>
+            <div class="form__inputs__plus" onclick="instrInput()">+</div>
+            <div id="instructions">
+                <input class="form__inputs__input" type="text" placeholder="Instruction #1" id="instruction1">
+                <input class="form__inputs__input" type="text" placeholder="Instruction #2" id="instruction2">
+                <input class="form__inputs__input" type="text" placeholder="Instruction #3" id="instruction3">
+            </div>      
+        </div>
+        <div class="form__create" onclick="createRecipe()">
+            Create Recipe
+        </div>
+    </div>
+</div>

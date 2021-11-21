@@ -1,0 +1,150 @@
+.view {
+  max-width: 1011.5px;
+  margin: 120px auto 0 auto;
+  padding-bottom: 100px;
+  &__top {
+    display: flex;
+    min-height: 421px;
+    &__left {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 511px;
+      margin-right: 45px;
+      &__side {
+        width: 33px;
+        font-family: Lato-Black;
+        font-size: 25px;
+        text-align: center;
+        p {
+          white-space: nowrap;
+          transform: rotate(270deg);
+        }
+      }
+      &__image {
+        width: 468px;
+        height: 100%;
+        background-image: url(../images/recipe-pizza.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        &--Pizza {
+          background-image: url(../images/recipe-pizza.jpg);
+        }
+        &--Burger {
+          background-image: url(../images/recipe-burger.jpg);
+        }
+        &--Chicken {
+          background-image: url(../images/recipe-pilaf.jpg);
+        }
+        &--Chow {
+          background-image: url(../images/recipe-chowmein.jpg);
+        }
+      }
+    }
+    &__text {
+      max-width: 455px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &__heading {
+        font-family: Lato-Black;
+        font-size: 25px;
+      }
+      &__subheading {
+        font-family: Lato-Black;
+        font-size: 20px;
+      }
+      &__content {
+        font-family: Caveat;
+        font-size: 20px;
+      }
+    }
+  }
+  &__content {
+    max-width: 968px;
+    margin: 58px auto 58px 43.5px;
+    &__title {
+      font-family: Lato-Black;
+      font-size: 25px;
+      margin-bottom: 35px;
+    }
+    &__group {
+      &__single {
+        font-family: Caveat;
+        font-size: 20px;
+        letter-spacing: 5px;
+      }
+    }
+    &__edit {
+      background-color: $site-yellow;
+      width: 127px;
+      height: 42px;
+      margin-right: 14.3px;
+      border-radius: 20px;
+      box-shadow: 0 10px 2px -2px rgba(0, 0, 0, 0.15);
+      font-family: Caveat;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 776px) {
+  .view {
+    max-width: 90%;
+    &__top {
+      flex-direction: column;
+      max-width: 511px;
+      &__left {
+        height: 421px;
+        margin-right: 0;
+      }
+      &__text {
+        max-width: 511px;
+        margin-left: 43.5px;
+        margin-top: 58px;
+      }
+    }
+    &__content {
+      max-width: 511px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .view {
+    &__top {
+      width: 100%;
+      &__left {
+        align-items: flex-end;
+        width: 100%;
+        height: 226px;
+      }
+      &__text {
+        margin: 58px auto 0 auto;
+        &__heading {
+          font-size: 20px;
+        }
+        &__content {
+          font-family: Caveat;
+          font-size: 16px;
+        }
+      }
+    }
+    &__content {
+      margin: 58px auto;
+      width: 100%;
+      &__title {
+        font-size: 20px;
+      }
+      &__group {
+        &__single {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,145 @@
+.your {
+  max-width: 1099px;
+  margin: 40px auto 0 auto;
+  padding-bottom: 60px;
+  .button {
+    cursor: pointer;
+    background-color: $site-yellow;
+    width: 127px;
+    height: 42px;
+    border-radius: 20px;
+    box-shadow: 0 10px 2px -2px rgba(0, 0, 0, 0.15);
+    font-family: Caveat;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__title {
+    font-family: Caveat-Bold;
+    font-size: 25px;
+    margin-bottom: 45px;
+  }
+  .recipes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .recipe {
+      margin-bottom: 40px;
+      &__top {
+        display: flex;
+        height: 263px;
+        margin-bottom: 15px;
+        &__left {
+          width: 300px;
+          border-radius: 20px;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &--Pizza {
+            background-image: url(../images/recipe-pizza.jpg);
+          }
+          &--Burger {
+            background-image: url(../images/recipe-burger.jpg);
+          }
+          &--Chicken {
+            background-image: url(../images/recipe-pilaf.jpg);
+          }
+          &--Chow {
+            background-image: url(../images/recipe-chowmein.jpg);
+          }
+        }
+        &__right {
+          border-radius: 20px;
+          width: 224px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          background-color: white;
+          &__title {
+            font-family: Lato-Black;
+            font-size: 15px;
+            border-bottom: 2px solid black;
+            margin-bottom: 19.5px;
+          }
+          &__description {
+            font-family: Lato-Regular;
+            font-size: 9px;
+            width: 140px;
+            margin-bottom: 19.5px;
+          }
+          &__info {
+            display: flex;
+            align-items: center;
+            height: 24.46px;
+            margin-bottom: 19.5px;
+            &__icon {
+              width: 23px;
+              height: 100%;
+              margin-right: 17.6px;
+            }
+            &__text {
+              font-family: Lato-Regular;
+              font-size: 10px;
+              margin-bottom: 0px;
+            }
+          }
+        }
+      }
+      &__buttons {
+        display: flex;
+        .button:first-child {
+          margin-right: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1140px) {
+  .your {
+    width: 80%;
+    &__title {
+      text-align: center;
+    }
+    .recipes {
+      justify-content: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 604px) {
+  .your {
+    &__title {
+      text-align: center;
+    }
+    .recipes {
+      justify-content: center;
+      .recipe {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 298px;
+
+        &__top {
+          flex-direction: column;
+          width: 298px;
+          height: auto;
+          &__left {
+            width: 100%;
+            height: 149px;
+          }
+          &__right {
+            width: 100%;
+            min-height: 169px;
+          }
+        }
+      }
+    }
+  }
+}

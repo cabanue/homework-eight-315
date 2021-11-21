@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+@font-face {
+  font-family: Caveat;
+  src: url(fonts/Caveat/Caveat-Regular.ttf);
+}
+
+@font-face {
+  font-family: Caveat-Bold;
+  src: url(fonts/Caveat/Caveat-Bold.ttf);
+}
+
+@font-face {
+  font-family: Gill;
+  src: url(fonts/Gill/GillSans.ttf);
+}
+
+@font-face {
+  font-family: Gill-Italic;
+  src: url(fonts/Gill/GillSans-Italic.ttf);
+}
+
+@font-face {
+  font-family: Gill-Light;
+  src: url(fonts/Gill/GillSans-Light.ttf);
+}
+
+@font-face {
+  font-family: Lato-Regular;
+  src: url(fonts/Lato/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: Lato-Italic;
+  src: url(fonts/Lato/Lato-Light.ttf);
+}
+
+@font-face {
+  font-family: Lato-Black;
+  src: url(fonts/Lato/Lato-Black.ttf);
+}
+
+.content {
+  position: relative;
+  min-height: 100vh;
+  background-image: linear-gradient(
+      to right,
+      rgba(242, 92, 84, 0.6),
+      rgba(242, 92, 84, 0.6)
+    ),
+    url(../images/hero.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.logout,
+.logout-but {
+  display: none;
+}
