@@ -412,7 +412,7 @@ footer .right img {
     height: 453px;
   }
 }
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 380px) {
   .home .circle-holder {
     width: 257.81px;
     height: 327.02px;

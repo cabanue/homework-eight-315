@@ -2,7 +2,7 @@ var instrCounter = 3;
 var ingrCounter = 3;
 var editInstrCounter;
 var editIngrCounter;
-var createName;
+var current;
 var recipeIndex;
 var yourRecipes = [
   {
@@ -40,8 +40,8 @@ function initFirebase() {
       $(".login-but").css("display", "none");
       $(".nav-links").addClass("nav-links--logged-in");
       console.log("connected");
-      console.log(user);
-      createName = user.displayName;
+      current = user.displayName;
+      $(".displayName").html(`${current}`);
     } else {
       $(".logout").css("display", "none");
       $(".logout-but").css("display", "none");
@@ -229,6 +229,7 @@ function createRecipe() {
 
   yourRecipes.push(recipeObj);
   window.location.hash = "#/your";
+  alert("recipe has been created");
 }
 
 function saveChanges() {
@@ -262,11 +263,13 @@ function saveChanges() {
 
   yourRecipes[recipeIndex] = recipeObj;
   MODEL.getPageData("your", loadPage);
+  alert("recipe updated");
 }
 
 function deleteRecipe(index) {
-  yourRecipes.splice(yourRecipes[index], 1);
+  yourRecipes.splice(index, 1);
   MODEL.getPageData("your", loadPage);
+  alert("recipe deleted");
 }
 
 function viewRecipeID(index) {
@@ -449,7 +452,7 @@ function route(id) {
 }
 
 function loadPage(pageID) {
-  user = firebase.auth().currentUser;
+  // current = firebase.auth().currentUser;
 
   if (pageID == "edit" || pageID == "view") {
     $("a.current").removeClass("current");
@@ -471,7 +474,7 @@ function loadPage(pageID) {
     );
   } else if (pageID == "create") {
     $(".create__title").html(
-      `<p>Hey ${user.displayName}, create your recipe!</p>`
+      `<p>Hey <span class="displayName">${current}</span>, create your recipe!</p>`
     );
     $(".content").css("background-image", "none");
     $(".content").css("background-color", "transparent");
@@ -502,7 +505,7 @@ function loadPage(pageID) {
     url(images/recipe-hero.jpg)`
     );
     $(".your__title").html(
-      `<p>Hey ${user.displayName}, here are your recipes!</p>`
+      `<p>Hey <span class="displayName">${current}</span>, here are your recipes!</p>`
     );
     loadYourRecipes();
   } else if (pageID == "view") {
@@ -511,7 +514,7 @@ function loadPage(pageID) {
     loadView();
   } else if (pageID == "edit") {
     $(".create__title").html(
-      `<p>Hey ${user.displayName}, edit your recipe!</p>`
+      `<p>Hey <span class="displayName">${current}</span>, edit your recipe!</p>`
     );
     $(".content").css("background-image", "none");
     $(".content").css("background-color", "transparent");
